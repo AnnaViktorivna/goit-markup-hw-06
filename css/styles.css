@@ -1102,6 +1102,7 @@ ul {
   .description-list {
     gap: 72px 24px;
   }
+
   .description-item {
     width: calc((100% - 2 * 24px) / 2);
   }
@@ -1182,9 +1183,15 @@ ul {
 
 @media screen and (min-width: 1158px) {
   /* header */
-  .container .container-nav {
+  .container {
     max-width: 1158px;
-    display: inline-flex;
+    /* display: inline-flex;
+    justify-content: space-between;
+    align-items: center; */
+  }
+  .container-nav {
+    max-width: 100%;
+    display: flex;
     justify-content: space-between;
     align-items: center;
   }
@@ -1205,6 +1212,8 @@ ul {
   .address-list {
     display: flex;
     flex-direction: row;
+    justify-content: right;
+    padding-right: 0;
     gap: 40px;
   }
   .address-link {
@@ -1248,10 +1257,19 @@ ul {
     padding-top: 120px;
     padding-bottom: 120px;
   }
+  .description-title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2; /* 120% */
+    letter-spacing: 0.02em;
+    text-align: left;
+  }
   .description-p {
     margin-bottom: 0;
   }
   .description-list {
+    display: inline-flex;
+    flex-wrap: nowrap;
     gap: 24px;
   }
   .description-item {
